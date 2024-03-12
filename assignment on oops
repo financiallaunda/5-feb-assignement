@@ -1,0 +1,58 @@
+#Explain Class and Object with respect to Object-Oriented Programming. Give a suitable example. Q2. Name the four pillars of OOPs. 
+
+#In object-oriented programming (OOP), a class is a blueprint for creating objects (instances). It defines the properties (attributes) and behaviors (methods) that all objects of that class will have. An object, on the other hand, is an instance of a class. It is a concrete realization of the class blueprint, with its own unique set of property values.
+class Car:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+    
+    def drive(self):
+        print(f"{self.make} {self.model} is driving.")
+
+# Creating objects (instances) of the Car class
+car1 = Car("Toyota", "Camry", 2022)
+car2 = Car("Tesla", "Model S", 2023)
+
+# Accessing object properties and methods
+print(f"Car 1: {car1.make}, {car1.model}, {car1.year}")
+car1.drive()
+
+print(f"Car 2: {car2.make}, {car2.model}, {car2.year}")
+car2.drive()
+#Encapsulation: Encapsulation is the bundling of data (attributes) and methods that operate on the data into a single unit, called a class. It hides the internal state of an object from the outside world and only exposes a public interface for interacting with the object.
+
+#Inheritance: Inheritance is a mechanism by which a class (subclass or derived class) can inherit properties and behaviors (attributes and methods) from another class (superclass or base class). It promotes code reuse and allows for hierarchical classification of objects.
+
+#Polymorphism: Polymorphism means the ability of objects of different classes to be treated as objects of a common superclass. It allows methods to be implemented in different ways in different subclasses, providing a way for a single interface to represent multiple types of objects.
+
+#Abstraction: Abstraction is the process of hiding the complex implementation details and showing only the essential features of the object. It helps in managing complexity by allowing the programmer to focus on what an object does rather than how it does it.
+
+#Explain why the __init__() function is used. Give a suitable example. 
+
+#The __init__() function, also known as the constructor, is a special method in Python classes. It is automatically called when a new instance (object) of the class is created. The primary purpose of the __init__() function is to initialize the attributes of the newly created object to some initial values.
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def introduce(self):
+        print(f"My name is {self.name} and I am {self.age} years old.")
+
+# Creating instances of the Person class
+person1 = Person("Alice", 30)
+person2 = Person("Bob", 25)
+
+# Calling the introduce method to introduce each person
+person1.introduce()
+person2.introduce()
+
+
+#Why self is used in OOPs? 
+
+#In object-oriented programming (OOP), self is a reference to the current instance of a class. It is used to access attributes and methods of the class within its own definition. The use of self is essential for proper encapsulation and instance management in Python classes
+
+#What is inheritance? Give an example for each type of inheritance. 
+
+#Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a new class (subclass or derived class) to inherit properties and behaviors (attributes and methods) from an existing class (superclass or base class). This promotes code reuse and enables hierarchical classification of objects.
+
